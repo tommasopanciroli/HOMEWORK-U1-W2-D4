@@ -35,8 +35,16 @@ console.log('Il risultato di questa funzione è:', crazySum(10, 20))
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
+const crazyDiff = function (n) {
+  if (n > 19) {
+    return Math.abs(n - 19) * 3
+  } else {
+    return Math.abs(n - 19)
+  }
+}
 
-
+console.log(crazyDiff(15, 19))
+console.log(crazyDiff(25, 19))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -45,6 +53,18 @@ console.log('Il risultato di questa funzione è:', crazySum(10, 20))
  se n è uguale a 400.
 */
 
+const boundary = function (n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(boundary(11))
+console.log(boundary(46))
+console.log(boundary(400))
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
@@ -52,6 +72,17 @@ console.log('Il risultato di questa funzione è:', crazySum(10, 20))
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
+
+const epify = function (string) {
+  if (string !== 'EPICODE') {
+    return (string = string + ' EPICODE')
+  } else {
+    return (string = string)
+  }
+}
+
+console.log(epify(' CIAO'))
+console.log(epify(' EPICODE'))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -79,6 +110,13 @@ console.log('Il risultato di questa funzione è:', crazySum(10, 20))
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+
+let str3 = 'Buonasera'
+
+const cutString = function (str3) {
+  return str3.slice(1, -1)
+}
+console.log(cutString(str3))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
